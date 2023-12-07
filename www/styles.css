@@ -1,0 +1,35 @@
+body {
+  --h: 200;
+  --s: 50%;
+  --l: 50%;
+  --bg: hsl(var(--h) var(--s) var(--l));
+  --dark: hsl(var(--h) var(--s) 10%);
+  --dark-hover: hsl(var(--h) var(--s) 25%);
+  --light: hsl(var(--h) var(--s) 99%);
+  
+  --gap: 1.5rem;
+  display: grid;
+  height: 100vh;
+  margin: unset;
+  place-content: center;
+  padding: var(--gap) unset;
+}
+
+.wac {
+  aspect-ratio: 1;
+  margin-block: var(--gap) 0;
+  width: calc(85vw - (2 * var(--gap)));
+}
+.wac-arcs {
+  transform: rotate(-15deg);
+  transform-origin: 50% 50%;;
+}
+
+.wac-arcs path {
+  fill: var(--dark);
+  stroke: hsl(var(--h), var(--s), var(--l));
+}
+.wac-arcs path:hover {
+  fill: var(--dark-hover);
+}
+
